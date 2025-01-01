@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.adminRoutes = void 0;
 const express_1 = __importDefault(require("express"));
+const auth_1 = require("../../middleware/auth");
+const admin_controller_1 = require("./admin.controller");
 const router = express_1.default.Router();
-router.get('/');
-// router.get('/:id', adminControllers.getAdmin);
-// router.delete('/:id', adminControllers.deleteAdmin);
-// router.patch('/:id', adminControllers.updateAdmin);
+router.patch('/users/:userId/block', (0, auth_1.auth)('Admin'), admin_controller_1.AdminController.blockUser);
+router.delete('/blogs/:id', (0, auth_1.auth)('Admin'), admin_controller_1.AdminController.deleteBlogById);
 exports.adminRoutes = router;

@@ -56,7 +56,7 @@ const generateRefreshToken = async (refreshToken: string) => {
     refreshToken,
     config.jwt_refresh_token as string,
   ) as JwtPayload;
-  const { userEmail, iat } = decoded;
+  const { userEmail } = decoded;
 
   // checking if the user is exist
   const user = await User.isUserExistsByCustomId(userEmail);

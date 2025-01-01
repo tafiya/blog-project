@@ -8,11 +8,7 @@ const blockUserById = async (userId: string) => {
   if (!user) {
     throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
   }
-  const result = await User.findByIdAndUpdate(
-    userId,
-    { isBlocked: true },
-    { new: true },
-  );
+  await User.findByIdAndUpdate(userId, { isBlocked: true }, { new: true });
 };
 
 const deleteBlogById = async (id: string) => {
@@ -20,11 +16,7 @@ const deleteBlogById = async (id: string) => {
   if (!blog) {
     throw new AppError(StatusCodes.NOT_FOUND, 'Blog not found');
   }
-  const result = await Blog.findByIdAndUpdate(
-    id,
-    { isDeleted: true },
-    { new: true },
-  );
+  await Blog.findByIdAndUpdate(id, { isDeleted: true }, { new: true });
 };
 
 export const AdminService = {

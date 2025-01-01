@@ -1,5 +1,5 @@
 import { TErrorSources, TGenericErrorResponse } from '../interface/error';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const handleDuplicateError = (err: any): TGenericErrorResponse => {
   const match = err.message.match(/"([^"]*)"/);
   const exactedMessage = match && match[1];

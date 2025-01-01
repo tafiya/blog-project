@@ -11,7 +11,9 @@ const handleCastError_1 = __importDefault(require("../errors/handleCastError"));
 const handleDuplicateError_1 = __importDefault(require("../errors/handleDuplicateError"));
 const handleValidationError_1 = __importDefault(require("../errors/handleValidationError"));
 const handleZodError_1 = __importDefault(require("../errors/handleZodError"));
-const globalErrorHandler = (err, req, res, next) => {
+const globalErrorHandler = (err, req, res, 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+next) => {
     let statusCode = 500;
     let message = 'Something went wrong';
     let errorSources = [
@@ -66,6 +68,7 @@ const globalErrorHandler = (err, req, res, next) => {
     res.status(statusCode).json({
         success: false,
         message,
+        statusCode,
         errorSources,
         stack: config_1.default.NODE_ENV === 'development' ? err === null || err === void 0 ? void 0 : err.stack : null,
     });
