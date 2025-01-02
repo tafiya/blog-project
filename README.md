@@ -139,11 +139,11 @@ Use tools like **Postman** or **cURL** to test the API endpoints.
 
 ## Video Explanation
 Provide a link to a video explaining the API design and functionality:  
-[Video Link](https://www.loom.com/share/1e21ffbcc78b4713a962a5235090e3bd?sid=b83166a9-14e1-46f1-b9b0-8265fdfe2ded)
+[Video Link](https://www.loom.com/share/f96dad0c412f4802b41e81ccd8c51428?sid=9ebf63ee-90ed-4158-99fe-76eb193857db)
 
 ## Live Link
 Provide the link to the live deployed application:  
-[Live Link](https://book-shop-server-githubnew.vercel.app/)
+[Live Link](https://blog-project-backend-amber.vercel.app/)
 
    
      
